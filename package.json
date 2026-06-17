@@ -1,0 +1,16 @@
+{
+  "name": "vue3-mc",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "start /B npm run dev:user & start /B npm run dev:order & npm run dev:host",
+    "dev:host": "npm -w apps/host run dev",
+    "dev:user": "npm -w apps/app-user run dev",
+    "dev:order": "npm -w apps/app-order run dev",
+    "build": "npm -w apps/app-user run build & npm -w apps/app-order run build & npm -w apps/host run build"
+  }
+}
