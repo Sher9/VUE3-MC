@@ -9,7 +9,7 @@
     <div class="card">
       <h3>跨系统调用演示</h3>
       <p>点击下方链接查看 User 系统调用 Order 系统组件的效果</p>
-      <router-link to="/cross-order" class="link">查看跨系统调用 →</router-link>
+      <router-link to="cross-order" class="link">查看跨系统调用 →</router-link>
     </div>
   </div>
 </template>

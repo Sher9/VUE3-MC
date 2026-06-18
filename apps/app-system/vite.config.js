@@ -10,20 +10,13 @@ export default defineConfig({
   plugins: [
     vue(),
     federation({
-      name: 'appUser',
+      name: 'appSystem',
       filename: 'remoteEntry.js',
       exposes: {
-        './UserCard': './src/components/UserCard.vue',
-        './UserList': './src/pages/UserList.vue',
-        './UserStore': './src/stores/userStore.js',
+        './RoleManagement': './src/pages/RoleManagement.vue',
+        './MenuManagement': './src/pages/MenuManagement.vue',
+        './PermissionManagement': './src/pages/PermissionManagement.vue',
         './register': './src/register.js'
-      },
-      remotes: {
-        appOrder: {
-          type: 'module',
-          name: 'appOrder',
-          entry: 'http://localhost:5002/remoteEntry.js'
-        }
       },
       shared: {
         vue: { 
@@ -48,7 +41,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 5001,
+    port: 5003,
     strictPort: true,
     cors: true
   },

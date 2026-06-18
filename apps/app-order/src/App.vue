@@ -1,33 +1,33 @@
 <template>
-  <div class="app-container">
+  <!-- 独立运行模式：自带 header + router-view -->
+  <div class="app-container" v-if="!embedded">
     <header class="app-header">
       <h1>Order 子系统</h1>
       <nav>
-        <router-link to="/">首页</router-link>
-        <router-link to="/list">订单列表</router-link>
-        <router-link to="/cross-user">跨系统调用User</router-link>
+        <router-link to="">首页</router-link>
+        <router-link to="list">订单列表</router-link>
+        <router-link to="cross-user">跨系统调用User</router-link>
       </nav>
     </header>
     <main class="app-content">
       <router-view />
     </main>
   </div>
+  <!-- 嵌入模式：由主系统提供布局，仅渲染子路由 -->
+  <router-view v-else />
 </template>
 
 <script setup>
+defineProps({
+  embedded: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #f0f2f5;
-}
+/* 仅在独立运行时生效的全局样式 */
 </style>
 
 <style scoped>

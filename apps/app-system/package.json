@@ -1,0 +1,22 @@
+{
+  "name": "app-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "3.4.38",
+    "vue-router": "4.4.5",
+    "pinia": "2.1.7",
+    "@vue3-mc/shared": "*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "5.2.4",
+    "@module-federation/vite": "1.16.8",
+    "vite": "6.4.3"
+  }
+}

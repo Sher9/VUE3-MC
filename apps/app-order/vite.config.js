@@ -15,7 +15,8 @@ export default defineConfig({
       exposes: {
         './OrderList': './src/pages/OrderList.vue',
         './OrderDetail': './src/components/OrderDetail.vue',
-        './OrderStore': './src/stores/orderStore.js'
+        './OrderStore': './src/stores/orderStore.js',
+        './register': './src/register.js'
       },
       remotes: {
         appUser: {

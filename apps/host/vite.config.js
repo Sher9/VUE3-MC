@@ -21,6 +21,11 @@ export default defineConfig({
           type: 'module',
           name: 'appOrder',
           entry: 'http://localhost:5002/remoteEntry.js'
+        },
+        appSystem: {
+          type: 'module',
+          name: 'appSystem',
+          entry: 'http://localhost:5003/remoteEntry.js'
         }
       },
       shared: {

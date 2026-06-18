@@ -7,10 +7,11 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "start /B npm run dev:user & start /B npm run dev:order & npm run dev:host",
+    "dev": "start /B npm run dev:user & start /B npm run dev:order & start /B npm run dev:host & start /B npm run dev:system",
     "dev:host": "npm -w apps/host run dev",
     "dev:user": "npm -w apps/app-user run dev",
     "dev:order": "npm -w apps/app-order run dev",
-    "build": "npm -w apps/app-user run build & npm -w apps/app-order run build & npm -w apps/host run build"
+    "dev:system": "npm -w apps/app-system run dev",
+    "build": "npm -w apps/app-user run build & npm -w apps/app-order run build & npm -w apps/host run build & npm -w apps/app-system run build"
   }
 }

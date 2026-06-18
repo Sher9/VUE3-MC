@@ -1,6 +1,6 @@
 <template>
   <div class="user-list">
-    <h2>用户列表</h2>
+    <h2>用户列表1</h2>
     <table class="user-table">
       <thead>
         <tr>
