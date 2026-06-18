@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.vite/
+.__mf__temp/
+*.d.ts
+*.tsbuildinfo
+.history/

@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vue3 模块联邦后台管理系统</title>
+
+  <!-- DNS 预解析（值由 .env 中的 VITE_*_URL 注入） -->
+  <link rel="dns-prefetch" href="__VITE_USER_URL__">
+  <link rel="dns-prefetch" href="__VITE_ORDER_URL__">
+  <link rel="dns-prefetch" href="__VITE_SYSTEM_URL__">
+
+  <!-- 预连接：提前建立 TCP+TLS 握手 -->
+  <link rel="preconnect" href="__VITE_USER_URL__" crossorigin>
+  <link rel="preconnect" href="__VITE_ORDER_URL__" crossorigin>
+  <link rel="preconnect" href="__VITE_SYSTEM_URL__" crossorigin>
+
+  <!-- 关键远程入口预加载 -->
+  <link rel="modulepreload" href="__VITE_USER_URL__/remoteEntry.js">
+  <link rel="modulepreload" href="__VITE_ORDER_URL__/remoteEntry.js">
+  <link rel="modulepreload" href="__VITE_SYSTEM_URL__/remoteEntry.js">
 </head>
 <body>
   <div id="app"></div>

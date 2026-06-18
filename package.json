@@ -12,6 +12,18 @@
     "dev:user": "npm -w apps/app-user run dev",
     "dev:order": "npm -w apps/app-order run dev",
     "dev:system": "npm -w apps/app-system run dev",
-    "build": "npm -w apps/app-user run build & npm -w apps/app-order run build & npm -w apps/host run build & npm -w apps/app-system run build"
+    "build": "npm -w apps/app-user run build & npm -w apps/app-order run build & npm -w apps/app-system run build & wait & npm -w apps/host run build",
+    "build:subs": "npm -w apps/app-user run build & npm -w apps/app-order run build & npm -w apps/app-system run build",
+    "build:host": "npm -w apps/host run build",
+    "lint": "eslint . --ext .js,.vue --fix",
+    "lint:check": "eslint . --ext .js,.vue"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-plugin-vue": "^9.28.0",
+    "vue-eslint-parser": "^9.4.3",
+    "@babel/eslint-parser": "^7.25.1",
+    "@babel/core": "^7.25.2",
+    "terser": "^5.31.0"
   }
 }
